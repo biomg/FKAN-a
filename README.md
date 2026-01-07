@@ -2,7 +2,7 @@
 
 FKAN-a is a deep learning framework for predicting drug-target interactions (DTI) by integrating Fourier spectral features and graph representations. This implementation supports multi-scale spectral fusion and handles both protein sequence embeddings and molecular graph features
 
-# Features
+## Features
 
 Multi-scale Fourier spectral fusion for protein representation.
 
@@ -14,10 +14,22 @@ Flexible training, evaluation, and inference scripts.
 
 Implements standard DTI evaluation metrics: AUROC, AUPRC, Accuracy, Sensitivity, Specificity.
 
-Training
+## Requirements
+
+FKAN-a supports environment setup via Conda using the provided environment.yml.
+
+To create the environment: 
+```bash
+conda env create -f environment.yml
+conda activate fkan-a
+```
+
+## Training
 
 To train FKAN-a using a config file:
 
+```bash
 python -m __main__ train \
     --run-id TestRun \
     --config config/default_config.yam
+```
